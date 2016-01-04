@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<style type="text/css" media="screen">
+			div { max-width: 400px; }
+		</style>
+
+	</head>
+
+	<body>
+		<div id="Radio" data-url="Radio" data-role="page">
+			<div data-role="header">
+				<h1>Radio Control</h1>
+				<a href="#Settings" data-icon="gear" class="ui-btn-right" id="Settings">Settings</a>
+				<a href="#" data-icon="refresh" class="ui-btn-left" id="Refresh">Refresh</a>
+			</div>
+			<div data-role="fieldcontain">
+				<fieldset data-role="containing-element">
+					<label for="selectFreq">Frequency</label>
+					<input type="number" name="Frequency" id="selectFreq" step="0.025" />
+				</fieldset>
+				<fieldset data-role="controlgroup" data-type="horizontal">
+					<label for="selectMode">Mode</label>
+					<select name="Mode" id="selectMode" data-native-menu="false">
+						<option value="LSB">LSB</option>
+						<option value="USB">USB</option>
+						<option value="CW">CW</option>
+						<option value="CWR">CWR</option>
+						<option value="AM">AM</option>
+						<option value="WFM">WFM</option>
+						<option value="FM">FM</option>
+						<option value="DIG">DIG</option>
+						<option value="PKT">PKT</option>
+					</select>
+					<label for="selectBandwidth">Bandwidth</label>
+					<select name="Bandwidth" id="selectBandwidth" data-native-menu="false">
+						<option value="Narrow">Narrow</option>
+						<option value="Medium">Medium</option>
+						<option value="Wide">Wide</option>
+					</select>
+				</fieldset>
+				<div data-role="fieldcontain">
+					<label for="selectSquelch">Squelch</label>
+					<select name="Squelch" id="selectSquelch" data-role="slider">
+						<option value="Off">SQL Off</option>
+						<option value="On">SQL On</option>
+					</select>
+					<label for="signalLevel">Signal</label>
+					<input type="range" name="signalLevel" id="signalLevel" 
+						value="0" min="0" max="150" data-highlight="true" />
+				</div>
+<!--
+				<div data-role="fieldcontain">
+					<label for="squelchValue">Squelch</label>
+					<input type="range" name="squelchValue" id="squelchValue" 
+						value="0" min="0" max="100" step="1" data-highlight="true" />
+				</div>
+				<div class="containing-element">
+					<button id="audioStart" data-icon="audio" 
+						class="ui-btn ui-icon-audio ui-btn-icon-right">Start Audio</button>
+				</div>
+-->
+			</div>
+			<div data-role="footer">
+				<h1>Leighton - VK2LI</h1>
+			</div>
+		</div>
+
+		<div id="Settings" data-role="page">
+			<div data-role="header">
+				<h1>Settings</h1>
+				<a href="#" data-icon="back" class="ui-btn-right" id="Back">Back</a>
+			</div>
+			<div data-role="content">
+				<div data-role="fieldcontain">
+					<label for="stepValue">Step</label>
+					<input type="number" name="Step" id="stepValue" step="1" />
+				</div>
+				<div data-role="fieldcontain">
+					<label for="squelchValue">Squelch</label>
+					<input type="number" name="Squelch" id="squelchValue" step="1" />
+				</div>
+
+<!--
+				<div data-role="fieldcontain">
+					<label for="selectARate">Audio Rate</label>
+					<select name="Audio" id="selectARate" data-native-menu="false">
+						<option value="0">Off</option>
+						<option value="8">8 kHz</option>
+						<option value="16">16 kHz</option>
+						<option value="32">32 kHz</option>
+						<option value="64">64 kHz</option>
+						<option value="128">128 kHz</option>
+					</select>
+				</div>
+-->
+			</div>
+
+			<div data-role="footer">
+				<h1>Leighton - VK2LI</h1>
+			</div>
+		</div>
+
+ 		<script src="control.js"></script>
+
+  </body>
+</html>
