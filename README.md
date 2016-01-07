@@ -16,12 +16,15 @@ Simple browser interface to control radio receivers
 
 Run rigctld connecting it to an appropriate radio. 
 eg.
-	rigctld -m <radioid> -r <serial-port> -s <serial-speed>
+	
+	rigctld -m 401 -r /dev/ttyUSB0 -s 38400
 	
 Start the webserver.
+	
 	node server.js
 
 Connect to the interface at:
+	
 	http://localhost:3000
 
 
