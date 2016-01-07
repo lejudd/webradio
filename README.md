@@ -1,14 +1,28 @@
-WebRadio
-===
-Browser radio interface to Hamlib rigctrl
+# WebRadio
+
+Browser radio interface to Hamlib rigctl
 
 Simple browser interface to control radio receivers
 
-Running
----
+## Requirements
+
+- hamlib
+- nodejs
+
+## Running
+
+Run rigctld connecting it to an appropriate radio.
+
+eg.
+
+	rigctld -m <radioid> -r <serial-port> -s <serial-speed>
+	
 node server.js
 
 http://localhost:3000
+
+
+## Running with apache
 
 By default, node serves the content and websocket on port 3000 
 To use apache to serve the content:
