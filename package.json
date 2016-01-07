@@ -1,0 +1,20 @@
+{
+  "name": "radio-webcontrol",
+  "version": "1.0.0",
+  "description": "Radio Web Control application for node",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lejudd/webradio.git"
+  },
+  "author": "Leighton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lejudd/webradio/issues"
+  },
+  "homepage": "https://github.com/lejudd/webradio#readme"
+}
