@@ -8,18 +8,21 @@ Simple browser interface to control radio receivers
 
 - hamlib
 - nodejs
+	- express
+	- http
+	- socket.io
 
 ## Running
 
-Run rigctld connecting it to an appropriate radio.
-
+Run rigctld connecting it to an appropriate radio. 
 eg.
-
 	rigctld -m <radioid> -r <serial-port> -s <serial-speed>
 	
-node server.js
+Start the webserver.
+	node server.js
 
-http://localhost:3000
+Connect to the interface at:
+	http://localhost:3000
 
 
 ## Running with apache

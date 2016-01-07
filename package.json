@@ -1,5 +1,5 @@
 {
-  "name": "radio-webcontrol",
+  "name": "webradio",
   "version": "1.0.0",
   "description": "Radio Web Control application for node",
   "main": "server.js",
