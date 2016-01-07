@@ -17,7 +17,7 @@ Simple browser interface to control radio receivers
 Run rigctld connecting it to an appropriate radio. 
 eg.
 	
-	rigctld -m 401 -r /dev/ttyUSB0 -s 38400
+	rigctld -m <radioid> -r <serial> -s <baud>
 	
 Start the webserver.
 	
