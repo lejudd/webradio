@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
 
 		<style type="text/css" media="screen">
 			div { max-width: 400px; }
@@ -23,10 +24,19 @@
 			</div>
 			<div data-role="fieldcontain">
 				<fieldset data-role="containing-element">
-					<label for="selectFreq">Frequency</label>
-					<input type="number" name="Frequency" id="selectFreq" step="0.025" />
+					<canvas id="display" height="50"></canvas>
 				</fieldset>
 				<fieldset data-role="controlgroup" data-type="horizontal">
+					<a href="#popup" data-rel="popup" data-role="button">Freq</a>
+					<div id="popup" data-role="popup">
+						<div data-role="header">
+							<h1>Freq</h1>
+						</div>
+						<div data-role="content">
+							<input type="number" name="Frequency" id="selectFreq" step="0.025" />
+							<a href="#" data-role="button" id="Enter" data-rel="back" class="ui-btn">Enter</a>
+						</div>
+					</div>
 					<label for="selectMode">Mode</label>
 					<select name="Mode" id="selectMode" data-native-menu="false">
 						<option value="LSB">LSB</option>
@@ -46,27 +56,16 @@
 						<option value="Wide">Wide</option>
 					</select>
 				</fieldset>
-				<div data-role="fieldcontain">
-					<label for="selectSquelch">Squelch</label>
+				<fieldset data-role"containing-element">
 					<select name="Squelch" id="selectSquelch" data-role="slider">
 						<option value="Off">SQL Off</option>
 						<option value="On">SQL On</option>
 					</select>
-					<label for="signalLevel">Signal</label>
 					<input type="range" name="signalLevel" id="signalLevel" 
 						value="0" min="0" max="150" data-highlight="true" />
-				</div>
-<!--
-				<div data-role="fieldcontain">
-					<label for="squelchValue">Squelch</label>
-					<input type="range" name="squelchValue" id="squelchValue" 
-						value="0" min="0" max="100" step="1" data-highlight="true" />
-				</div>
-				<div class="containing-element">
-					<button id="audioStart" data-icon="audio" 
-						class="ui-btn ui-icon-audio ui-btn-icon-right">Start Audio</button>
-				</div>
--->
+						<button id="audioStart" data-icon="audio" 
+							class="ui-btn ui-icon-audio ui-btn-icon-right">Start Audio</button>
+				</fieldset>
 			</div>
 			<div data-role="footer">
 				<h1>Leighton - VK2LI</h1>
@@ -108,7 +107,7 @@
 			</div>
 		</div>
 
+		<script type="text/javascript" src="display.js"></script>
  		<script src="control.js"></script>
-
-  </body>
+	</body>
 </html>
